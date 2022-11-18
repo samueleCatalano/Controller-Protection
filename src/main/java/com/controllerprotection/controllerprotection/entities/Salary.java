@@ -12,9 +12,12 @@ public class Salary {
     @JoinColumn(name = "id", referencedColumnName = "user_id")
     private User user;
 
-    public Salary(Long id, User user) {
+    private double salary;
+
+    public Salary(Long id, User user, double salary) {
         this.id = id;
         this.user = user;
+        this.salary = salary;
     }
 
     public Salary() {
@@ -34,5 +37,13 @@ public class Salary {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 }
